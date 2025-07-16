@@ -14,8 +14,9 @@ export default function NotFound() {
               Page Not Found
             </h2>
             <p className="text-lg text-[#343f35]/80 mb-8">
-              It seems we can't find the page you're looking for. Perhaps we
-              could interest you in some of our signature dishes instead?
+              It seems we can&lsquo;t find the page you&lsquo;re looking for.
+              Perhaps we could interest you in some of our signature dishes
+              instead?
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link

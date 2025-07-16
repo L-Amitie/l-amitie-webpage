@@ -95,7 +95,7 @@ export function EventForm({ eventTypes }: EventFormProps) {
     });
 
     try {
-      const response = await fetch(
+      await fetch(
         "https://docs.google.com/forms/d/e/1FAIpQLSf0W4XXvedjiNStIKMMqRDf1hG8ZHUvw8_3-jr-CqhPaQkwhg/formResponse",
         {
           method: "POST",
@@ -113,7 +113,7 @@ export function EventForm({ eventTypes }: EventFormProps) {
       // Reset the form and errors
       form.reset();
       setFormErrors({});
-    } catch (error) {
+    } catch {
       toast.dismiss();
       toast.error("Submission Error", {
         description:

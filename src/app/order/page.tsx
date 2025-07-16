@@ -13,9 +13,9 @@ export default function OrderPage() {
               Coming Soon
             </h2>
             <p className="text-lg text-[#343f35]/80 mb-6">
-              We're currently working on bringing you a seamless online ordering
-              experience. In the meantime, please feel free to visit us in
-              person or call us to place your order for pickup.
+              We&lsquo;re currently working on bringing you a seamless online
+              ordering experience. In the meantime, please feel free to visit us
+              in person or call us to place your order for pickup.
             </p>
             <div className="space-y-4 text-[#343f35]/80">
               <p>
