@@ -3,9 +3,10 @@ import { Alice } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import RestarauntNavbar from "@/components/home-page/restaraunt-navbar";
+import RestaurantFooter from "@/components/home-page/restaurant-footer";
 
 export const metadata: Metadata = {
-  title: "L'Amitie",
+  title: "L'Amitié",
   description: "French-Inspired Breakfast & Lunch Bistro in Downtown Denton",
   icons: {
     icon: "/favicon.ico",
@@ -28,10 +29,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${alice.className} ${edwardian.variable} antialiased`}>
+    <html lang="en" className="h-full">
+      <body
+        className={`${alice.className} ${edwardian.variable} antialiased min-h-full flex flex-col`}
+      >
         <RestarauntNavbar />
-        {children}
+        <main className="flex-1">{children}</main>
+        <RestaurantFooter />
       </body>
     </html>
   );

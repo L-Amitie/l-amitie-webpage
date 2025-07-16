@@ -16,7 +16,7 @@ export default function OurStoryPage() {
           </CardHeader>
           <CardContent className="space-y-6">
             <p className="leading-relaxed">
-              Founded in 2020, L&apos;Amitie was born from a passion for
+              Founded in 2020, L&apos;Amitié was born from a passion for
               authentic French cuisine and a desire to create a warm, welcoming
               dining experience. Our name, meaning &quot;friendship&quot; in
               French, reflects our commitment to treating every guest as family.

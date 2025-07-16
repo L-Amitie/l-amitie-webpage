@@ -28,12 +28,12 @@ export default function RestarauntNavbar() {
         }
       `}</style>
 
-      <div className="max-w-7xl mx-auto h-full flex items-center justify-center gap-8 px-4">
+      <div className="max-w-7xl mx-auto h-full flex items-center gap-8 px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
             src="/lamitie_logo.png"
-            alt="L'Amitie Logo"
+            alt="L'Amitié Logo"
             width={100}
             height={100}
             className="h-24 w-auto"
@@ -44,34 +44,7 @@ export default function RestarauntNavbar() {
         <NavigationMenu viewport={false}>
           <NavigationMenuList className="flex items-center gap-4">
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-[#343f35] text-[#f6f1d8] h-12 px-6 text-base font-medium">
-                About Us
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[300px] gap-4 bg-[#343f35] p-4 text-[#f6f1d8]">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link href="/our-story" className="text-[#f6f1d8]">
-                        <div className="font-medium">Our Story</div>
-                        <div className="text-[#f6f1d8]/70">
-                          Learn about our history and values
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link href="/location" className="text-[#f6f1d8]">
-                        <div className="font-medium">Location & Hours</div>
-                        <div className="text-[#f6f1d8]/70">
-                          Find us and plan your visit
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-[#343f35] text-[#f6f1d8] h-12 px-6 text-base font-medium">
+              <NavigationMenuTrigger className="bg-[#343f35] text-[#f6f1d8] h-12 px-6 text-base font-medium hover:bg-[#9abf8c] hover:text-[#5a6b5c]">
                 Menus
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -111,7 +84,34 @@ export default function RestarauntNavbar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-[#343f35] text-[#f6f1d8] h-12 px-6 text-base font-medium">
+              <NavigationMenuTrigger className="bg-[#343f35] text-[#f6f1d8] h-12 px-6 text-base font-medium hover:bg-[#9abf8c] hover:text-[#5a6b5c]">
+                About Us
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[300px] gap-4 bg-[#343f35] p-4 text-[#f6f1d8]">
+                  <li>
+                    <NavigationMenuLink asChild>
+                      <Link href="/our-story" className="text-[#f6f1d8]">
+                        <div className="font-medium">Our Story</div>
+                        <div className="text-[#f6f1d8]/70">
+                          Learn about our history and values
+                        </div>
+                      </Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link href="/location" className="text-[#f6f1d8]">
+                        <div className="font-medium">Location & Hours</div>
+                        <div className="text-[#f6f1d8]/70">
+                          Find us and plan your visit
+                        </div>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="bg-[#343f35] text-[#f6f1d8] h-12 px-6 text-base font-medium hover:bg-[#9abf8c] hover:text-[#5a6b5c]">
                 Contact Us
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -138,6 +138,22 @@ export default function RestarauntNavbar() {
                   </li>
                 </ul>
               </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link
+                href="/reservations"
+                className="bg-[#343f35] text-[#f6f1d8] h-12 px-6 rounded-md hover:bg-[#9abf8c] hover:text-[#5a6b5c] transition-colors inline-flex items-center font-medium"
+              >
+                Make a Reservation
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link
+                href="/order"
+                className="bg-[#343f35] text-[#f6f1d8] h-12 px-6 rounded-md hover:bg-[#9abf8c] hover:text-[#5a6b5c] transition-colors inline-flex items-center font-medium"
+              >
+                Order Online
+              </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>

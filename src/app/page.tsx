@@ -10,10 +10,10 @@ export default function Home() {
       href: "/events",
     },
     {
-      title: "Our Story",
+      title: "Our Menus",
       description:
-        "Discover the passion and tradition behind L&apos;Amitie&apos;s culinary excellence.",
-      href: "/our-story",
+        "Explore our carefully crafted breakfast, lunch, and coffee selections.",
+      href: "/menus",
     },
     {
       title: "Visit Us",
@@ -26,11 +26,11 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#f6f1d8]">
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center">
+      <section className="relative h-[75vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-[#343f35]/60 z-10"></div>
         <div className="relative z-20 text-center text-[#f6f1d8] px-4">
           <h1 className="text-7xl md:text-8xl script-font mb-6">
-            Welcome to L&apos;Amitie
+            Welcome to L&lsquo;Amitié
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
             Experience the finest French-inspired breakfast and lunch in an
@@ -53,6 +53,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Story Preview Section */}
+      <section className="py-16 px-4 bg-[#343f35] text-[#f6f1d8]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-5xl md:text-6xl script-font mb-8">Our Story</h2>
+          <p className="text-lg md:text-xl leading-relaxed mb-6">
+            In the heart of downtown Denton, L&lsquo;Amitié was born from a deep
+            love of French culinary traditions and a desire to create a space
+            where food and friendship intertwine. Our name, meaning
+            &ldquo;friendship&rdquo; in French, reflects our commitment to
+            fostering genuine connections through exceptional dining
+            experiences.
+          </p>
+          <p className="text-lg md:text-xl leading-relaxed mb-8">
+            Every dish we serve is crafted with care, combining classic French
+            techniques with local Texas ingredients to create something truly
+            unique. From our freshly baked croissants to our signature brunch
+            specialties, each plate tells a story of passion, tradition, and
+            innovation.
+          </p>
+          <Link
+            href="/our-story"
+            className="inline-block bg-[#f6f1d8] text-[#343f35] px-8 py-3 rounded-md hover:bg-[#9abf8c] transition-colors"
+          >
+            Read More About Our Journey
+          </Link>
+        </div>
+      </section>
+
       {/* Featured Sections */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -62,7 +90,7 @@ export default function Home() {
               href={section.href}
               className="block transition-transform hover:scale-[1.02]"
             >
-              <Card>
+              <Card className="text-center">
                 <CardHeader>
                   <CardTitle className="script-font text-4xl md:text-5xl">
                     {section.title}

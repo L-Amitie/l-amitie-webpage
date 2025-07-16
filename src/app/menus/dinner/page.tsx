@@ -16,7 +16,7 @@ export default function DinnerPage() {
           </CardHeader>
           <CardContent className="space-y-6">
             <p className="leading-relaxed">
-              We&apos;re thrilled to announce that L&apos;Amitie will be
+              We&apos;re thrilled to announce that L&apos;Amitié will be
               expanding our hours to include dinner service in the near future.
               Our talented chefs are crafting an exquisite dinner menu that will
               feature classic French dishes with a modern twist.
