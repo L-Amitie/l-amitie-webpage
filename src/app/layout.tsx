@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import RestaurantNavbar from "@/components/home-page/restaurant-navbar";
 import RestaurantFooter from "@/components/home-page/restaurant-footer";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "L'Amitié",
@@ -36,6 +37,11 @@ export default function RootLayout({
         <RestaurantNavbar />
         <main className="flex-1">{children}</main>
         <RestaurantFooter />
+        <Analytics
+          mode={
+            process.env.NODE_ENV === "production" ? "production" : "development"
+          }
+        />
       </body>
     </html>
   );
