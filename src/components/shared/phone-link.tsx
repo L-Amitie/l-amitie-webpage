@@ -3,14 +3,9 @@ import { cn } from "@/lib/utils";
 interface PhoneLinkProps {
   phoneNumber: string;
   className?: string;
-  showIcon?: boolean;
 }
 
-export function PhoneLink({
-  phoneNumber,
-  className,
-  showIcon = false,
-}: PhoneLinkProps) {
+export function PhoneLink({ phoneNumber, className }: PhoneLinkProps) {
   // Remove any non-digit characters for the href
   const cleanNumber = phoneNumber.replace(/\D/g, "");
 
