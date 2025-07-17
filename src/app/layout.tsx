@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Alice } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import RestarauntNavbar from "@/components/home-page/restaraunt-navbar";
+import RestaurantNavbar from "@/components/home-page/restaurant-navbar";
 import RestaurantFooter from "@/components/home-page/restaurant-footer";
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${alice.className} ${edwardian.variable} antialiased min-h-full flex flex-col`}
       >
-        <RestarauntNavbar />
+        <RestaurantNavbar />
         <main className="flex-1">{children}</main>
         <RestaurantFooter />
       </body>
