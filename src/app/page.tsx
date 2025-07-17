@@ -39,7 +39,7 @@ export default function Home() {
           <div className="flex gap-4 justify-center">
             <Link
               href="/reservations"
-              className="bg-[#343f35] text-[#f6f1d8] px-8 py-3 rounded-md hover:bg-[#5a6b5c] transition-colors"
+              className="bg-[#343f35] text-[#f6f1d8] px-8 py-3 rounded-md hover:bg-[#9abf8c] hover:text-[#5a6b5c] transition-colors"
             >
               Make a Reservation
             </Link>
