@@ -30,7 +30,7 @@ export default function EventsPage() {
     {
       title: "Social Gatherings",
       description: "Birthday parties, anniversaries, and family reunions",
-      capacity: "Flexible arrangements",
+      capacity: "Up to 75 guests",
     },
   ];
 
@@ -45,7 +45,7 @@ export default function EventsPage() {
           {/* Event Types Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {eventTypes.map((event) => (
-              <Card key={event.title} className="bg-[#343f35]">
+              <Card key={event.title} className="bg-[#5a6b5c]">
                 <CardHeader>
                   <CardTitle className="text-xl text-[#f6f1d8]">
                     {event.title}
@@ -64,7 +64,18 @@ export default function EventsPage() {
           </div>
 
           {/* Event Form */}
-          <EventForm eventTypes={eventTypes} />
+          <Card className="bg-[#5a6b5c]">
+            <CardHeader>
+              <CardTitle className="text-[#f6f1d8]">Request an Event</CardTitle>
+              <CardDescription className="text-[#f6f1d8]/80">
+                Fill out the form below and we&apos;ll get back to you within 24
+                hours.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <EventForm eventTypes={eventTypes} />
+            </CardContent>
+          </Card>
         </div>
       </div>
       <Toaster

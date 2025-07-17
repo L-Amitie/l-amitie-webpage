@@ -1,5 +1,6 @@
+"use client";
+
 import React from "react";
-import Link from "next/link";
 import {
   Card,
   CardHeader,
@@ -8,6 +9,57 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Instagram, Facebook, Mail, Phone } from "lucide-react";
+import { PhoneLink } from "@/components/shared/phone-link";
+
+interface ContactMethod {
+  name: string;
+  value: string;
+  href: string;
+  icon: React.ElementType;
+  description: string;
+  color: string;
+}
+
+const ContactCard = ({ method }: { method: ContactMethod }) => {
+  const handleClick = () => {
+    window.open(
+      method.href,
+      method.name === "Instagram" || method.name === "Facebook"
+        ? "_blank"
+        : "_self"
+    );
+  };
+
+  return (
+    <Card
+      className="transition-all duration-300 hover:scale-[1.02] bg-[#5a6b5c] cursor-pointer"
+      onClick={handleClick}
+    >
+      <CardContent className="p-6">
+        <div className="flex items-center space-x-4">
+          <div className={method.color}>
+            <method.icon size={32} className="text-[#f6f1d8]" />
+          </div>
+          <div>
+            <CardTitle className="text-xl text-[#f6f1d8]">
+              {method.name}
+            </CardTitle>
+            <p className="text-[#f6f1d8] mt-1">
+              {method.name === "Phone" ? (
+                <PhoneLink phoneNumber={method.value} />
+              ) : (
+                method.value
+              )}
+            </p>
+            <CardDescription className="text-[#f6f1d8]/70">
+              {method.description}
+            </CardDescription>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
 
 export default function ContactPage() {
   const contactMethods = [
@@ -55,36 +107,7 @@ export default function ContactPage() {
 
         <div className="space-y-8">
           {contactMethods.map((method) => (
-            <Link
-              key={method.name}
-              href={method.href}
-              target={
-                method.name === "Instagram" || method.name === "Facebook"
-                  ? "_blank"
-                  : "_self"
-              }
-              rel="noopener noreferrer"
-              className="block"
-            >
-              <Card className="transition-all duration-300 hover:scale-[1.02] bg-[#5a6b5c]">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4">
-                    <div className={method.color}>
-                      <method.icon size={32} className="text-[#f6f1d8]" />
-                    </div>
-                    <div>
-                      <CardTitle className="text-xl text-[#f6f1d8]">
-                        {method.name}
-                      </CardTitle>
-                      <p className="text-[#f6f1d8] mt-1">{method.value}</p>
-                      <CardDescription className="text-[#f6f1d8]/70">
-                        {method.description}
-                      </CardDescription>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+            <ContactCard key={method.name} method={method} />
           ))}
         </div>
 

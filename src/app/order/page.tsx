@@ -1,4 +1,29 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { ServiceCard } from "@/components/order/service-card";
+import { PhoneLink } from "@/components/shared/phone-link";
+
+const deliveryServices = [
+  {
+    title: "Toast",
+    description: "Order directly through our system",
+    href: "https://www.toasttab.com/local/order/l-amitie-529-bolivar-st",
+  },
+  {
+    title: "Grubhub",
+    description: "Order through Grubhub",
+    href: "https://www.grubhub.com/restaurant/lamiti-529-bolivar-st-denton/8105176",
+  },
+  {
+    title: "DoorDash",
+    description: "Order through DoorDash",
+    href: "https://www.doordash.com/store/l%E2%80%99amiti%C3%A9-denton-28125837/?srsltid=AfmBOor1LcQ5c6FeAh8HvYKLbaq07ZsZB2G2Re7rlyj_k1TlpBBcw5Fi",
+  },
+  {
+    title: "Uber Eats",
+    description: "Order through Uber Eats",
+    href: "https://www.ubereats.com/store/lamitie/OY5czE3kRjW8FBTIo907Kg?srsltid=AfmBOorwyA5HWQreC6Y11tnwM4OB0KjlNjvCien_QSimxbxCnkrwu0my",
+  },
+];
 
 export default function OrderPage() {
   return (
@@ -7,25 +32,34 @@ export default function OrderPage() {
         <h1 className="text-6xl md:text-7xl script-font text-[#343f35] mb-8">
           Online Ordering
         </h1>
-        <Card className="bg-white/80 backdrop-blur">
+        <Card className="bg-[#5a6b5c] text-[#f6f1d8]">
           <CardContent className="p-8">
-            <h2 className="text-2xl font-medium text-[#343f35] mb-6">
-              Coming Soon
+            <h2 className="text-2xl font-medium text-[#f6f1d8] mb-6">
+              Order Online
             </h2>
-            <p className="text-lg text-[#343f35]/80 mb-6">
-              We&lsquo;re currently working on bringing you a seamless online
-              ordering experience. In the meantime, please feel free to visit us
-              in person or call us to place your order for pickup.
+            <p className="text-lg text-[#f6f1d8] mb-8">
+              Choose your preferred way to order from L&apos;Amitié:
             </p>
-            <div className="space-y-4 text-[#343f35]/80">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+              {deliveryServices.map((service) => (
+                <ServiceCard
+                  key={service.title}
+                  title={service.title}
+                  description={service.description}
+                  href={service.href}
+                />
+              ))}
+            </div>
+            <div className="mt-12 space-y-4 text-[#f6f1d8]">
               <p>
                 <strong>Hours:</strong> Tuesday - Sunday, 8:00 AM to 2:00 PM
               </p>
               <p>
-                <strong>Phone:</strong> (940) 555-0123
+                <strong>Phone:</strong>{" "}
+                <PhoneLink phoneNumber="(940) 381-0001" />
               </p>
               <p>
-                <strong>Location:</strong> 123 Main Street, Denton, TX 76201
+                <strong>Location:</strong> 529 Bolivar St, Denton, TX 76201
               </p>
             </div>
           </CardContent>
