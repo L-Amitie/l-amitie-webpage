@@ -14,10 +14,14 @@ export default function RestaurantFooter() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#343f35] hover:text-[#343f35]/80 transition-colors mb-2"
+              aria-label="Follow us on Instagram @lamitie_76201"
             >
-              <Instagram size={32} />
+              <Instagram size={32} aria-hidden="true" />
+              <span className="sr-only">Instagram</span>
             </Link>
-            <span className="text-sm text-[#343f35]/80">@lamitie_76201</span>
+            <span className="text-sm text-[#343f35]/80" aria-hidden="true">
+              @lamitie_76201
+            </span>
           </div>
           <div className="flex flex-col items-center">
             <Link
@@ -25,10 +29,14 @@ export default function RestaurantFooter() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#343f35] hover:text-[#343f35]/80 transition-colors mb-2"
+              aria-label="Follow us on Facebook @lamitiebistro"
             >
-              <Facebook size={32} />
+              <Facebook size={32} aria-hidden="true" />
+              <span className="sr-only">Facebook</span>
             </Link>
-            <span className="text-sm text-[#343f35]/80">@lamitiebistro</span>
+            <span className="text-sm text-[#343f35]/80" aria-hidden="true">
+              @lamitiebistro
+            </span>
           </div>
         </div>
       </FooterContent>
