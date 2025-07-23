@@ -5,6 +5,7 @@ import "./globals.css";
 import RestaurantNavbar from "@/components/home-page/restaurant-navbar";
 import RestaurantFooter from "@/components/home-page/restaurant-footer";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "L'Amitié",
@@ -37,6 +38,7 @@ export default function RootLayout({
         <RestaurantNavbar />
         <main className="flex-1">{children}</main>
         <RestaurantFooter />
+        <SpeedInsights />
         <Analytics
           mode={
             process.env.NODE_ENV === "production" ? "production" : "development"
