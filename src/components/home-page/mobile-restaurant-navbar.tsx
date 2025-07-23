@@ -43,8 +43,11 @@ export default function MobileRestaurantNavbar() {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button className="lg:hidden bg-[#343f35] text-[#f6f1d8] h-12 px-4 text-base font-medium hover:bg-[#9abf8c] hover:text-[#5a6b5c] transition-colors ml-auto">
-          <Menu className="h-8 w-8" />
+        <Button
+          className="lg:hidden bg-[#343f35] text-[#f6f1d8] h-12 px-4 text-base font-medium hover:bg-[#9abf8c] hover:text-[#5a6b5c] transition-colors ml-auto"
+          aria-label="Open menu"
+        >
+          <Menu className="h-8 w-8" aria-hidden="true" />
         </Button>
       </SheetTrigger>
       <SheetContent

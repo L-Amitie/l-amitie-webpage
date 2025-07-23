@@ -36,11 +36,12 @@ export default function RestaurantNavbar() {
             <Image
               src="/lamitie_logo.png"
               alt="L'Amitié Logo"
-              width={200}
-              height={150}
-              className="w-auto h-auto max-h-24"
+              width={170}
+              height={96}
+              className="w-[170px] h-[96px]"
               style={{ objectFit: "contain" }}
               priority
+              quality={75}
             />
           </Link>
 

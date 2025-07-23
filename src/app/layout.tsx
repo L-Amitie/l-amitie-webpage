@@ -18,11 +18,13 @@ export const metadata: Metadata = {
 const alice = Alice({
   weight: "400",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const edwardian = localFont({
   src: "../fonts/edwardianscriptitc.ttf",
   variable: "--font-edwardian",
+  display: "swap",
 });
 
 export default function RootLayout({
@@ -32,6 +34,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body
         className={`${alice.className} ${edwardian.variable} antialiased min-h-full flex flex-col`}
       >

@@ -27,25 +27,25 @@ export default function Home() {
     <main className="min-h-screen bg-[#f6f1d8]">
       {/* Hero Section */}
       <section className="relative h-[75vh] flex items-center justify-center">
-        <div className="absolute inset-0 bg-[#343f35]/60 z-10"></div>
-        <div className="relative z-20 text-center text-[#f6f1d8] px-4">
+        <div className="absolute inset-0 bg-[#343f35]/80 z-10"></div>
+        <div className="relative z-20 text-center text-white px-4">
           <h1 className="text-7xl md:text-8xl script-font mb-6">
             Welcome to L&lsquo;Amitié
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto font-medium">
             Experience the finest French-inspired breakfast and lunch in an
             atmosphere of warmth and friendship. Dinner service coming soon!
           </p>
           <div className="flex gap-4 justify-center">
             <Link
               href="/reservations"
-              className="bg-[#343f35] text-[#f6f1d8] px-8 py-3 rounded-md hover:bg-[#9abf8c] hover:text-[#5a6b5c] transition-colors"
+              className="bg-[#343f35] text-white px-8 py-3 rounded-md hover:bg-[#9abf8c] hover:text-[#343f35] transition-colors font-medium"
             >
               Make a Reservation
             </Link>
             <Link
               href="/menus"
-              className="bg-[#f6f1d8] text-[#343f35] px-8 py-3 rounded-md hover:bg-[#9abf8c] transition-colors"
+              className="bg-white text-[#343f35] px-8 py-3 rounded-md hover:bg-[#9abf8c] hover:text-[#343f35] transition-colors font-medium"
             >
               View Our Menu
             </Link>
@@ -54,10 +54,10 @@ export default function Home() {
       </section>
 
       {/* Our Story Preview Section */}
-      <section className="py-16 px-4 bg-[#343f35] text-[#f6f1d8]">
+      <section className="py-16 px-4 bg-[#343f35] text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl md:text-6xl script-font mb-8">Our Story</h2>
-          <p className="text-lg md:text-xl leading-relaxed mb-6">
+          <p className="text-lg md:text-xl leading-relaxed mb-6 font-medium">
             In the heart of downtown Denton, L&lsquo;Amitié was born from a deep
             love of French culinary traditions and a desire to create a space
             where food and friendship intertwine. Our name, meaning
@@ -65,7 +65,7 @@ export default function Home() {
             fostering genuine connections through exceptional dining
             experiences.
           </p>
-          <p className="text-lg md:text-xl leading-relaxed mb-8">
+          <p className="text-lg md:text-xl leading-relaxed mb-8 font-medium">
             Every dish we serve is crafted with care, combining classic French
             techniques with local Texas ingredients to create something truly
             unique. From our freshly baked croissants to our signature brunch
@@ -74,7 +74,7 @@ export default function Home() {
           </p>
           <Link
             href="/our-story"
-            className="inline-block bg-[#f6f1d8] text-[#343f35] px-8 py-3 rounded-md hover:bg-[#9abf8c] transition-colors"
+            className="inline-block bg-white text-[#343f35] px-8 py-3 rounded-md hover:bg-[#9abf8c] hover:text-[#343f35] transition-colors font-medium"
           >
             Read More About Our Journey
           </Link>
