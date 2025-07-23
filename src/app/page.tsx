@@ -27,8 +27,8 @@ export default function Home() {
     <main className="min-h-screen bg-[#f6f1d8]">
       {/* Hero Section */}
       <section className="relative h-[75vh] flex items-center justify-center">
-        <div className="absolute inset-0 bg-[#343f35]/80 z-10"></div>
-        <div className="relative z-20 text-center text-white px-4">
+        <div className="absolute inset-0 bg-[#2b3a2d]/75 z-10"></div>
+        <div className="relative z-20 text-center text-[#f8f3dc] px-4">
           <h1 className="text-7xl md:text-8xl script-font mb-6">
             Welcome to L&lsquo;Amitié
           </h1>
@@ -39,13 +39,13 @@ export default function Home() {
           <div className="flex gap-4 justify-center">
             <Link
               href="/reservations"
-              className="bg-[#343f35] text-white px-8 py-3 rounded-md hover:bg-[#9abf8c] hover:text-[#343f35] transition-colors font-medium"
+              className="bg-[#2b3a2d] text-[#f8f3dc] px-8 py-3 rounded-md hover:bg-[#8ab17d] hover:text-[#2b3a2d] transition-colors font-medium"
             >
               Make a Reservation
             </Link>
             <Link
               href="/menus"
-              className="bg-white text-[#343f35] px-8 py-3 rounded-md hover:bg-[#9abf8c] hover:text-[#343f35] transition-colors font-medium"
+              className="bg-[#f8f3dc] text-[#2b3a2d] px-8 py-3 rounded-md hover:bg-[#8ab17d] hover:text-[#2b3a2d] transition-colors font-medium"
             >
               View Our Menu
             </Link>
@@ -54,7 +54,7 @@ export default function Home() {
       </section>
 
       {/* Our Story Preview Section */}
-      <section className="py-16 px-4 bg-[#343f35] text-white">
+      <section className="py-16 px-4 bg-[#2b3a2d] text-[#f8f3dc]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-5xl md:text-6xl script-font mb-8">Our Story</h2>
           <p className="text-lg md:text-xl leading-relaxed mb-6 font-medium">
@@ -74,7 +74,7 @@ export default function Home() {
           </p>
           <Link
             href="/our-story"
-            className="inline-block bg-white text-[#343f35] px-8 py-3 rounded-md hover:bg-[#9abf8c] hover:text-[#343f35] transition-colors font-medium"
+            className="inline-block bg-[#f8f3dc] text-[#2b3a2d] px-8 py-3 rounded-md hover:bg-[#8ab17d] hover:text-[#2b3a2d] transition-colors font-medium"
           >
             Read More About Our Journey
           </Link>
