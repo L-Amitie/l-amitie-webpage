@@ -99,4 +99,3 @@ l-amitie-webpage/
   - Dark: `#2b3a2d`
   - Light: `#f8f3dc`
   - Hover: `#8ab17d`
-    ## 🔧 Available Scripts
